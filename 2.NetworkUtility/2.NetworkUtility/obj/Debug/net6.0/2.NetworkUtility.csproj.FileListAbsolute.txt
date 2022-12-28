@@ -1,0 +1,15 @@
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\bin\Debug\net6.0\2.NetworkUtility.exe
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\bin\Debug\net6.0\2.NetworkUtility.deps.json
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\bin\Debug\net6.0\2.NetworkUtility.runtimeconfig.json
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\bin\Debug\net6.0\2.NetworkUtility.dll
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\bin\Debug\net6.0\2.NetworkUtility.pdb
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.csproj.AssemblyReference.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.AssemblyInfoInputs.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.AssemblyInfo.cs
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.csproj.CoreCompileInputs.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.dll
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\refint\2.NetworkUtility.dll
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.pdb
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\2.NetworkUtility.genruntimeconfig.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\2.NetworkUtility\2.NetworkUtility\obj\Debug\net6.0\ref\2.NetworkUtility.dll
