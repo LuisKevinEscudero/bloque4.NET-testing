@@ -1,5 +1,6 @@
 ﻿using _2.NetworkUtility.Ping;
 using FluentAssertions;
+using FluentAssertions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,14 +12,21 @@ namespace NetworkUtility.Test.PingTest
 {
     public class NetworkServiceTest
     {
+        private readonly NetworkService _pingService;
+        public NetworkServiceTest()
+        {
+            //SUT
+            _pingService = new NetworkService();
+        }
+
+        
         [Fact]
         public void NetworkService_SendPing_ReturnString()
         {
             //Arrange 
-            var pingService = new NetworkService();
 
             //Act
-            var result = pingService.SendPing();
+            var result = _pingService.SendPing();
 
             //Assert
             result.Should().NotBeNullOrWhiteSpace();
@@ -33,15 +41,28 @@ namespace NetworkUtility.Test.PingTest
         public void NetworkService_PingTimeout_ReturnInt(int a, int b, int expected)
         {
             //Arrange 
-            var pingService = new NetworkService();
 
             //Act
-            var result = pingService.PingTimeout(a, b);
+            var result = _pingService.PingTimeout(a, b);
 
             //Assert
             result.Should().Be(expected);
             result.Should().BeGreaterThanOrEqualTo(2);
             result.Should().NotBeInRange(-100000,0);
+        }
+
+        [Fact]
+        public void NetworkService_LastPingDate_ReturnDate()
+        {
+            //Arrange 
+
+            //Act
+            var result = _pingService.LastPingDate();
+
+            //Assert
+            result.Should().BeAfter(1.January(2020));
+            result.Should().BeBefore(1.January(2030));
+
         }
     }
 }
