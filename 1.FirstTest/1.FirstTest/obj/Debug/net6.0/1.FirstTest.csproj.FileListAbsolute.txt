@@ -1,0 +1,15 @@
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\bin\Debug\net6.0\1.FirstTest.exe
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\bin\Debug\net6.0\1.FirstTest.deps.json
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\bin\Debug\net6.0\1.FirstTest.runtimeconfig.json
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\bin\Debug\net6.0\1.FirstTest.dll
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\bin\Debug\net6.0\1.FirstTest.pdb
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.csproj.AssemblyReference.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.AssemblyInfoInputs.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.AssemblyInfo.cs
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.csproj.CoreCompileInputs.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.dll
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\refint\1.FirstTest.dll
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.pdb
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\1.FirstTest.genruntimeconfig.cache
+C:\Users\luiskevin.escudero\Desktop\bloque4.NET-testing\1.FirstTest\1.FirstTest\obj\Debug\net6.0\ref\1.FirstTest.dll
