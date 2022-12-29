@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gestorInventario.Test", "gestorInventario.Test\gestorInventario.Test.csproj", "{35DB400B-E2FC-4E8C-9BDE-CD178E8A2E02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "gestor", "..\..\gestorInventario\gestor\gestor\gestor.csproj", "{F2C52342-F539-4425-AC4E-9F5E0C2F4080}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35DB400B-E2FC-4E8C-9BDE-CD178E8A2E02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35DB400B-E2FC-4E8C-9BDE-CD178E8A2E02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35DB400B-E2FC-4E8C-9BDE-CD178E8A2E02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35DB400B-E2FC-4E8C-9BDE-CD178E8A2E02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F2C52342-F539-4425-AC4E-9F5E0C2F4080}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2C52342-F539-4425-AC4E-9F5E0C2F4080}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2C52342-F539-4425-AC4E-9F5E0C2F4080}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2C52342-F539-4425-AC4E-9F5E0C2F4080}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {34F2F2D9-A74A-4BB7-9123-698A02A2D39F}
+	EndGlobalSection
+EndGlobal
