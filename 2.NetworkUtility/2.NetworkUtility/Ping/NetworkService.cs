@@ -24,7 +24,7 @@ namespace _2.NetworkUtility.Ping
             return DateTime.Now;
         }
 
-        public PingOptions PingOptions()
+        public PingOptions GetPingOptions()
         {
             return new PingOptions()
             {
@@ -32,6 +32,29 @@ namespace _2.NetworkUtility.Ping
                 Ttl=1
             };
 
+        }
+
+        public List<PingOptions> MostRecentPings()
+        {
+            List<PingOptions> pingOptions = new List<PingOptions>()
+            {
+                new PingOptions()
+                {
+                    DontFragment = true,
+                    Ttl=1
+                },
+                new PingOptions()
+                {
+                    DontFragment = true,
+                    Ttl=1
+                },
+                new PingOptions()
+                {
+                    DontFragment = true,
+                    Ttl=1
+                }
+            };
+            return pingOptions;
         }
     }
 }

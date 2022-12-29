@@ -4,6 +4,7 @@ using FluentAssertions.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using Xunit;
@@ -62,6 +63,47 @@ namespace NetworkUtility.Test.PingTest
             //Assert
             result.Should().BeAfter(1.January(2020));
             result.Should().BeBefore(1.January(2030));
+
+        }
+
+        [Fact]
+        public void NetworkService_GetPingOptions_ReturnObject()
+        {
+            //Arrange 
+            var expected = new PingOptions()
+            {
+                DontFragment = true,
+                Ttl = 1
+            };
+
+            //Act
+            var result = _pingService.GetPingOptions();
+
+            //Assert
+            result.Should().BeOfType<PingOptions>();
+            result.Should().BeEquivalentTo(expected);
+            result.Ttl.Should().Be(1);
+
+        }
+
+
+        [Fact]
+        public void NetworkService_MostRecentPings_ReturnObject()
+        {
+            //Arrange 
+            var expected = new PingOptions()
+            {
+                DontFragment = true,
+                Ttl = 1
+            };
+
+            //Act
+            var result = _pingService.MostRecentPings();
+
+            //Assert
+            result.Should().BeOfType<List<PingOptions>>();
+            result.Should().ContainEquivalentOf(expected);
+            result.Should().Contain(x => x.DontFragment == true);
 
         }
     }
