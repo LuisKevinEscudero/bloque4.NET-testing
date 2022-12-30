@@ -10,19 +10,35 @@ namespace gestorInventario.Test.MenuTest
 {
     public class TestMenu
     {
+        private readonly Menu _menu;
         private readonly DBConnection _conn;
-        private readonly String _dbName;
-        private readonly Console consol;
+
         public TestMenu()
         {
+            _menu = A.Fake<Menu>();
             _conn = A.Fake<DBConnection>();
-            _dbName = "database.db";
         }
 
         [Fact]
-        public void Menu_Start_ReturnsVoid()
+        public void Menu_InsertExampleData_ReturnsVoid() 
         {
-            Console console = new A().Fake<Console>();
+            //Arrange
+
+            //Act
+            _conn.DropTable();
+            _conn.CreateTable();
+            _menu.InsertExampleData();
+
+            //Assert
+            var insertedItems = _conn.ReadAll();
+            var expectedItemCount = 10;
+            foreach (var item in insertedItems)
+            {
+                Console.WriteLine(item.Name);
+            }
+            Assert.Equal(expectedItemCount, insertedItems.Count());
+            Assert.Equal("Item 1", insertedItems[0].Name);
+            Assert.Equal("Item 2", insertedItems[1].Name);
         }
     }
 }
