@@ -383,12 +383,49 @@ namespace gestorInventario.Test.MenuTest
 
             // Assert that the StockException is thrown
             var ex= Assert.Throws<StockException>(() => _menu.UpdateProduct());
-            Assert.Equal("The stock value entered is not valid: -10", ex.Message);
+            Assert.Equal("The stock must be a positive number: -10", ex.Message);
 
             // Reset the Console.In stream
             Console.SetIn(originalInput);
         }
 
+        [Fact]
+        public void Menu_UpdateProduct_PriceException_ThrowsPriceException() 
+        {
+            var _conn = A.Fake<DBConnection>();
+            _conn.DeleteAll();
+            _conn.DropTable();
+            _conn.CreateTable();
+
+            var item = new Item
+            {
+                Name = "Product 1",
+                Description = "Description 1",
+                Category = "Category 1",
+                Brand = "Brand 1",
+                Model = "Model 1",
+                SerialNumber = "Serial 1",
+                Location = "Location 1",
+                Status = "Status 1",
+                Notes = "Notes 1",
+                AddDate = string.Empty,
+                Stock = 10,
+                Price = 99.99
+            };
+            var insert = _conn.Insert(item);
+            // Set up the input for the UpdateProduct method
+            string input = "1\nProduct 1\nDescription 1\nCategory 1\nBrand 1\nModel 1\nSerial 1\nLocation 1\nStatus 1\nNotes 1\n10\n-99.99\n";
+            var inputStream = new MemoryStream(Encoding.UTF8.GetBytes(input));
+            var originalInput = Console.In;
+            Console.SetIn(new StreamReader(inputStream));
+
+            // Assert that the priceException is thrown
+            var ex = Assert.Throws<PriceException>(() => _menu.UpdateProduct());
+            Assert.Equal("The price must be a positive number: -99.99", ex.Message);
+
+            // Reset the Console.In stream
+            Console.SetIn(originalInput);
+        }
 
         [Fact]
         public void Menu_DeleteProduct_ReturnVoid()
@@ -449,6 +486,52 @@ namespace gestorInventario.Test.MenuTest
             Assert.Equal("Description 1", addedItem.Description);
             // Add assertions for the other item properties here
 
+            Console.SetIn(originalInput);
+        }
+
+        [Fact]
+        public void Menu_AddProduct_PriceException_ThrowsPriceException()
+        {
+            // Arrange
+            var _conn = A.Fake<DBConnection>();
+            _conn.DeleteAll();
+            _conn.DropTable();
+            _conn.CreateTable();
+
+            // Set up the input for the AddProduct method
+            string input = "Product 1\nDescription 1\nCategory 1\nBrand 1\nModel 1\nSerial 1\nLocation 1\nStatus 1\nNotes 1\n10\n-99.99\n";
+            var inputStream = new MemoryStream(Encoding.UTF8.GetBytes(input));
+            var originalInput = Console.In;
+            Console.SetIn(new StreamReader(inputStream));
+
+            // Assert that the priceException is thrown
+            var ex = Assert.Throws<PriceException>(() => _menu.AddProduct());
+            Assert.Equal("The price must be a positive number: -99.99", ex.Message);
+
+            // Reset the Console.In stream
+            Console.SetIn(originalInput);
+        }
+
+        [Fact]
+        public void Menu_AddProduct_StockException_ThrowsStockException()
+        {
+            // Arrange
+            var _conn = A.Fake<DBConnection>();
+            _conn.DeleteAll();
+            _conn.DropTable();
+            _conn.CreateTable();
+
+            // Set up the input for the AddProduct method
+            string input = "Product 1\nDescription 1\nCategory 1\nBrand 1\nModel 1\nSerial 1\nLocation 1\nStatus 1\nNotes 1\n-10\n99.99\n";
+            var inputStream = new MemoryStream(Encoding.UTF8.GetBytes(input));
+            var originalInput = Console.In;
+            Console.SetIn(new StreamReader(inputStream));
+
+            // Assert that the StockException is thrown
+            var ex = Assert.Throws<StockException>(() => _menu.AddProduct());
+            Assert.Equal("The stock must be a  positive number: -10", ex.Message);
+
+            // Reset the Console.In stream
             Console.SetIn(originalInput);
         }
     }

@@ -365,15 +365,39 @@ namespace gestorInventario.Test.DBConnectionTest
         public void DBConnection_Read_ReturnsItem() 
         {
             //Arrange
+            _conn.DeleteAll();
+            var item = new Item
+            {
+                Name = "Product 1",
+                Description = "Description of product 1",
+                Category = "Category 1",
+                Brand = "Brand 1",
+                Model = "Model 1",
+                SerialNumber = "SN001",
+                Location = "Location 1",
+                Status = "Status 1",
+                Notes = "Notes for product 1",
+                AddDate = DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss"),
+                Stock = 10,
+                Price = 100.00
+            };
 
-            var item = new Item { Name = "Test Item" }; 
             _conn.Insert(item);
+            var itemFromDb = _conn.Read(item.Id);
 
-            //Act
-            var result = _conn.Read(1);
-
-            //Assert
-            Assert.Equal("Test Item", result.Name);
+            Assert.Equal(item.Id, itemFromDb.Id);
+            Assert.Equal(item.Name, itemFromDb.Name);
+            Assert.Equal(item.Description, itemFromDb.Description);
+            Assert.Equal(item.Category, itemFromDb.Category);
+            Assert.Equal(item.Brand, itemFromDb.Brand);
+            Assert.Equal(item.Model, itemFromDb.Model);
+            Assert.Equal(item.SerialNumber, itemFromDb.SerialNumber);
+            Assert.Equal(item.Location, itemFromDb.Location);
+            Assert.Equal(item.Status, itemFromDb.Status);
+            Assert.Equal(item.Notes, itemFromDb.Notes);
+            Assert.Equal(item.AddDate, itemFromDb.AddDate);
+            Assert.Equal(item.Stock, itemFromDb.Stock);
+            Assert.Equal(item.Price, itemFromDb.Price);
 
         }
 
